@@ -10,9 +10,6 @@ rm -rf cms patches.lock.json
 # Add Drush and Composer Patches.
 composer require -n --no-plugins --no-update drush/drush cweagans/composer-patches:^2@beta
 
-# Add field_validation patch.
-composer config --no-plugins -j extra.patches.drupal/field_validation '{"#3524477: Breaking errors in D11.2 or D11.x": "https://www.drupal.org/files/issues/2025-06-17/field_validation-issue-3524477-mr-15.patch"}'
-
 # Programmatically fix Composer 2.2 allow-plugins to avoid errors
 composer config --no-plugins allow-plugins.composer/installers true
 composer config --no-plugins allow-plugins.cweagans/composer-patches true
